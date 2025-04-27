@@ -23,6 +23,10 @@ $isValid = $validator->isValid('user@example.com'); // true
 
 // Проверка, относится ли email к распространенным доменам
 $isCommon = $validator->isCommonDomain('user@gmail.com'); // true
+
+// Проверка, является ли email одним из коррпоротивных доменов
+$isCorporate = $validator->isCorporateDomain('user@amazon.com'); // true
+
 ```
 
 ## Запуск тестов

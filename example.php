@@ -10,6 +10,7 @@ $testEmails = [
     'user@example.com',
     'invalid-email',
     'john.doe@gmail.com',
+    'john.doe@google.com',
     'test@domain',
     'user@yahoo.com',
     'employee@microsoft.com',
@@ -22,6 +23,10 @@ foreach ($testEmails as $email) {
     
     if ($validator->isValid($email)) {
         echo "Распространенный домен: " . ($validator->isCommonDomain($email) ? 'Да' : 'Нет') . "\n";
+    }
+
+    if ($validator->isValid($email)) {
+        echo "Корпоротивный домен: " . ($validator->isCorporateDomain($email) ? 'Да' : 'Нет') . "\n";
     }
     
     echo "-------------------\n";
